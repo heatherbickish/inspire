@@ -8,6 +8,7 @@ import { setHTML, setText } from "../utils/Writer.js"
 export class TodoController {
   constructor() {
     console.log('✅🎮')
+    AppState.on('account', this.showTodo)
     AppState.on('account', this.fetchTodo)
     AppState.on('todos', this.drawTodo)
   }
@@ -64,6 +65,12 @@ export class TodoController {
       console.error(error)
       Pop.toast('Uh oh! Could not delete todo')
     }
+  }
+
+  showTodo() {
+    const todoFormElm = document.getElementById('todo-list')
+    todoFormElm.classList.remove('d-none')
+    console.log('showing')
   }
 
 
