@@ -15,7 +15,7 @@
   <title>Inspire</title>
 </head>
 
-<body>
+<body class="bg-success">
   <!-- SECTION -->
   <header>
     <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
@@ -37,7 +37,35 @@
   </header>
 
   <!-- SECTION -->
-  <main>
+  <main class="container-fluid">
+    <section class="row">
+      <div class="col-md-3 mt-5">
+        <h6 id="todo-list" role="button" class="selectable rounded mb-3 text-center p-2" data-bs-toggle="offcanvas"
+          data-bs-target="#todo-list-offcanvas"><span id="todo-count">0</span> Todos Remaining</h6>
+
+        <div class="offcanvas offcanvas-start" id="todo-list-offcanvas">
+          <div class="offcanvas-header mt-3">
+            <p>Add a todo</p>
+          </div>
+
+          <form onsubmit="app.TodoController.createTodo()">
+            <div id="my-todos" class="input-group mb-3 offcanvas-body">
+              <label for="todo-description"></label>
+              <input required id="todo-description" name="description" type="text" class="form-control rounded"
+                minlength="1" maxlength="15">
+              <button class="btn btn-outline-light rounded" type="submit"><i class="mdi mdi-plus"></i></button>
+            </div>
+            <!-- <div class="ms-3">
+              <input type="checkbox" name="" id="">
+            </div> -->
+          </form>
+
+        </div>
+
+
+      </div>
+    </section>
+
 
   </main>
 
