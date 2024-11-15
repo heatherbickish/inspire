@@ -49,17 +49,20 @@
           </div>
 
           <form onsubmit="app.TodoController.createTodo()">
-            <div id="my-todos" class="input-group mb-3 offcanvas-body">
+            <div class="input-group mb-3 offcanvas-body">
               <label for="todo-description"></label>
               <input required id="todo-description" name="description" type="text" class="form-control rounded"
                 minlength="1" maxlength="15">
               <button class="btn btn-outline-light rounded" type="submit"><i class="mdi mdi-plus"></i></button>
             </div>
+          </form>
+
+          <div id="my-todos">
+
             <!-- <div class="ms-3">
               <input type="checkbox" name="" id="">
             </div> -->
-          </form>
-
+          </div>
         </div>
 
 

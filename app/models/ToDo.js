@@ -1,12 +1,9 @@
 
 export class Todo {
-  forEach(arg0) {
-    throw new Error("Method not implemented.")
-  }
-  push(createdTodo) {
-    throw new Error("Method not implemented.")
-  }
+
+
   constructor(data) {
+    this.id = data.id
     this.completed = data.completed
     this.description = data.description
     this.creatorId = data.creatorId
@@ -17,7 +14,10 @@ export class Todo {
   get todoTemplate() {
     return `
   <div class="ms-3 selectable rounded">
-    <input type="checkbox" name="" id="">
+  <input onchange="app.TodoController.markedTodo('${this.id}')" type="checkbox" name="" id="">
+  <span class="p-3 mb-3">${this.description}</span>
+  <span role="button" onclick="app.TodoController.deleteTodo('${this.id}')" ${this.isMarked}><i class="mdi mdi-trash-can-outline text-danger"></i></span>
+  <hr>
   </div>
   
   `
@@ -25,5 +25,9 @@ export class Todo {
 
 
 
-
+  get isMarked() {
+    return
+    if (this.completed) return 'checked'
+    return ''
+  }
 }
