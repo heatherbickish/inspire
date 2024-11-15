@@ -13,20 +13,19 @@ export class Todo {
 
   get todoTemplate() {
     return `
-  <div class="ms-3 selectable rounded">
-  <input onchange="app.TodoController.markedTodo('${this.id}')" type="checkbox" name="" id="">
-  <span class="p-3 mb-3">${this.description}</span>
-  <span role="button" onclick="app.TodoController.deleteTodo('${this.id}')" ${this.isMarked}><i class="mdi mdi-trash-can-outline text-danger"></i></span>
-  <hr>
+  <div class="ms-3 selectable rounded d-flex justify-content-between pe-2">
+    <div>
+      <input onchange="app.TodoController.markedTodo('${this.id}')" ${this.isMarked} type="checkbox" name="" id="">
+      <span class="p-3 mb-3">${this.description}</span>
+    </div>
+    <span role="button" onclick="app.TodoController.deleteTodo('${this.id}')" ><i class="mdi mdi-trash-can-outline text-danger"></i></span>
   </div>
+  <hr>
   
   `
   }
 
-
-
   get isMarked() {
-    return
     if (this.completed) return 'checked'
     return ''
   }

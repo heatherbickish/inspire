@@ -3,7 +3,7 @@ import { api } from "../services/AxiosService.js"
 import { todoService } from "../services/ToDoService.js"
 import { getFormData } from "../utils/FormHandler.js"
 import { Pop } from "../utils/Pop.js"
-import { setHTML } from "../utils/Writer.js"
+import { setHTML, setText } from "../utils/Writer.js"
 
 export class TodoController {
   constructor() {
@@ -37,15 +37,15 @@ export class TodoController {
   }
 
   drawTodo() {
-    console.log('🖋️✅')
     let createdTodoHTML = ''
     AppState.todos.forEach(todo => createdTodoHTML += todo.todoTemplate)
     setHTML('my-todos', createdTodoHTML)
+    const markedTodo = AppState.todos.filter(todo => todo.completed == false)
+    setText('todo-count', `${markedTodo.length}`)
   }
 
   async markedTodo(todoId) {
     try {
-      console.log('✔️', todoId)
       await todoService.markedTodo(todoId)
     } catch (error) {
       console.error(error)
