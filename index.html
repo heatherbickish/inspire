@@ -5,74 +5,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="icon" href="https://bcw.blob.core.windows.net/public/img/9977764104160066">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/7.0.96/css/materialdesignicons.min.css"
     integrity="sha512-fXnjLwoVZ01NUqS/7G5kAnhXNXat6v7e3M9PhoMHOTARUMCaf5qNO84r5x9AFf5HDzm3rEZD8sb/n6dZ19SzFA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style/main.css">
   <link rel="stylesheet" href="assets/style/style.css">
-  <title>Inspire</title>
+  <title>🪸Inspire</title>
 </head>
 
-<body class="">
+<body class="container">
   <!-- SECTION -->
-  <header>
-    <nav class="navbar navbar-dark navbar-expand bg-dark text-light px-2">
-      <a class="navbar-brand" href="#">
+  <header id="image" class="bg-img">
+    <nav class="">
 
-      </a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <!-- NAVLINKS -->
-          <!-- <a href="#/about" class="nav-link">About</a> -->
-        </div>
-      </div>
     </nav>
   </header>
 
   <!-- SECTION -->
-  <main id="image" class="container-fluid">
+  <main class="container">
 
-  </main>
-  <section class="row">
-    <div class="col-md-3 mt-5">
-      <h6 id="todo-list" role="button" class="d-none selectable rounded mb-3 text-center p-2" data-bs-toggle="offcanvas"
-        data-bs-target="#todo-list-offcanvas"><span id="todo-count">0</span> Todos
-        Remaining</h6>
+    <section class="row justify-content-end">
+      <div class="col-md-3 mt-5 border border-outline-white rounded">
+        <h6 id="todo-list" role="button" class="text-shadow d-none selectable rounded mt-2 text-center text-white"
+          data-bs-toggle="offcanvas" data-bs-target="#todo-list-offcanvas"><span id="todo-count">0</span> Todos
+          Remaining</h6>
 
-      <div class="offcanvas offcanvas-start" id="todo-list-offcanvas">
-        <div class="offcanvas-header mt-3">
-          <p>Add a todo</p>
-        </div>
-
-        <form onsubmit="app.TodoController.createTodo()">
-          <div class="input-group mb-3 offcanvas-body">
-            <label for="todo-description"></label>
-            <input required id="todo-description" name="description" type="text" class="form-control rounded"
-              minlength="1" maxlength="20">
-            <button class="btn btn-outline-light rounded" type="submit"><i class="mdi mdi-plus"></i></button>
+        <div class="offcanvas offcanvas-end form bg-dark text-light fw-bold" id="todo-list-offcanvas">
+          <div class="offcanvas-header mt-3">
+            <p>Add a todo</p>
           </div>
-        </form>
 
-        <div id="my-todos">
+          <form onsubmit="app.TodoController.createTodo()" class="mt-3">
+            <div class="input-group mb-3 offcanvas-body">
+              <label for="todo-description"></label>
+              <input required id="todo-description" name="description" type="text" class="form-control rounded"
+                minlength="1" maxlength="20">
+              <button class="btn btn-outline-light rounded" type="submit"><i class="mdi mdi-plus"></i></button>
+            </div>
+          </form>
 
-          <!-- <div class="ms-3">
+          <div id="my-todos">
+
+            <!-- <div class="ms-3">
               <input type="checkbox" name="" id="">
             </div> -->
+          </div>
         </div>
+
+
       </div>
+    </section>
+  </main>
 
 
-    </div>
-  </section>
-
-
-
+  <article id="quote" class="text-shadow text-light text-center">
+    <!-- <h4>Author</h4>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquid facere nostrum, cumque doloremque quos
+      dolore architecto sit! Provident accusantium officiis aspernatur dolores vero, atque reprehenderit voluptatum
+      ducimus quis ipsum?</p> -->
+  </article>
   <!-- SECTION -->
   <footer>
     <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>

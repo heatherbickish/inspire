@@ -9,3 +9,28 @@
 .profile-picture.profile-picture-sm {
   height: 64px;
 }
+
+.bg-img {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.text-shadow {
+  text-shadow: 0px 1.5px 1px black;
+  line-height: 2em;
+}
+
+.form {
+  opacity: 0.6;
+}
+
+.quote {
+  opacity: 0;
+  transition: opacity 2s 1s ease;
+}
+
+.hover-author:hover+.quote {
+  transition: opacity 2s ease;
+  opacity: 1;
+}

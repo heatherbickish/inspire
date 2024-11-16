@@ -21,12 +21,11 @@ export class ImageController {
   }
 
   drawImage() {
-    console.log('🖋️🖼️')
     setHTML('image', AppState.images.ImageBg)
     document.body.style.backgroundImage = `url(${AppState.images.largeImgUrl})`
   }
 
-
+  // FIXME img repeat
 
 
 }

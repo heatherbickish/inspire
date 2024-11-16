@@ -18,7 +18,7 @@ export class Todo {
       <input onchange="app.TodoController.markedTodo('${this.id}')" ${this.isMarked} type="checkbox" name="" id="">
       <span class="p-3 mb-3">${this.description}</span>
     </div>
-    <span role="button" onclick="app.TodoController.deleteTodo('${this.id}')" ><i class="mdi mdi-trash-can-outline text-danger"></i></span>
+    <span role="button" onclick="app.TodoController.deleteTodo('${this.id}')" ><i class="mdi mdi-trash-can-outline text-danger fs-4 fw-bold"></i></span>
   </div>
   <hr>
   
