@@ -1,4 +1,5 @@
 import { AuthController } from './controllers/AuthController.js';
+import { ClockController } from "./controllers/ClockController.js";
 import { ImageController } from "./controllers/ImageController.js";
 import { QuoteController } from "./controllers/QuoteController.js";
 import { TodoController } from "./controllers/ToDoController.js";
@@ -11,6 +12,7 @@ class App {
   TodoController = new TodoController()
   ImageController = new ImageController()
   QuoteController = new QuoteController()
+  ClockController = new ClockController()
 
   constructor() {
     if (USE_ROUTER) {

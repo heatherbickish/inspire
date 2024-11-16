@@ -5,7 +5,6 @@ import { setHTML } from "../utils/Writer.js"
 
 export class QuoteController {
   constructor() {
-    console.log('💬🎮')
     this.fetchQuote()
     AppState.on('account', this.drawQuote)
   }
@@ -20,7 +19,6 @@ export class QuoteController {
   }
 
   drawQuote() {
-    console.log('🖋️💬')
     setHTML('quote', AppState.quotes.QuoteTemplate)
 
   }

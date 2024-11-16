@@ -5,10 +5,8 @@ import { api } from "./AxiosService.js"
 class QuoteService {
   async fetchQuote() {
     const response = await api.get('api/quotes')
-    console.log('💬📡', response.data)
     const quote = new Quote(response.data)
     AppState.quotes = quote
-    console.log('✅💬📡', response.data)
   }
 
 
