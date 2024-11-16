@@ -19,6 +19,8 @@ export class TodoController {
       const formElm = event.target
       const formData = getFormData(formElm)
       await todoService.createTodo(formData)
+      // @ts-ignore
+      formElm.reset()
       Pop.toast('todo created!', 'success', 'top')
 
     } catch (error) {

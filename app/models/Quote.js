@@ -11,7 +11,7 @@ export class Quote {
   get QuoteTemplate() {
     return `
       <p class="hover-author selectable rounded">${this.author}</p>
-      <h5 class="quote">${this.quote}</h5>
+      <h5 class="quote">"${this.quote}"</h5>
   `
   }
 

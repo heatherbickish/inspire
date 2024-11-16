@@ -12,8 +12,9 @@
 
 .bg-img {
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  /* background-size: contain; */
+  /* background-position: center; */
+  object-fit: cover;
 }
 
 .text-shadow {
@@ -33,4 +34,8 @@
 .hover-author:hover+.quote {
   transition: opacity 2s ease;
   opacity: 1;
+}
+
+.time-display {
+  font-size: 150px;
 }
