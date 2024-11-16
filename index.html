@@ -14,17 +14,23 @@
   <title>🪸Inspire</title>
 </head>
 
+<!-- SECTION bg image -->
+
 <body class="container">
-  <!-- SECTION -->
   <header id="image" class="bg-img">
     <nav class="">
 
     </nav>
   </header>
 
-  <!-- SECTION todo -->
   <main class="container">
-    <section class="row justify-content-end">
+    <!-- SECTION display weather -->
+    <section class="row justify-content-between">
+      <div id="weather" class="col-md-3 mt-5 border border-outline-white rounded">
+        <!-- <h6 class="text-shadow selectable rounded mt-2 text-center text-white">weather</h6> -->
+      </div>
+
+      <!-- SECTION todo -->
       <div class="col-md-3 mt-5 border border-outline-white rounded">
         <h6 id="todo-list" role="button" class="text-shadow d-none selectable rounded mt-2 text-center text-white"
           data-bs-toggle="offcanvas" data-bs-target="#todo-list-offcanvas"><span id="todo-count">0</span> Todos
@@ -52,15 +58,14 @@
 
     <!-- SECTION display time -->
     <section class="row">
-      <div class="col text-center mt-5 text-light time-display text-shadow">
-        <h1 id="time"></h1>
+      <div class="col text-center mt-5 text-light text-shadow">
+        <h1 class=" time-display" id="time"></h1>
       </div>
     </section>
   </main>
 
-
   <!-- SECTION quote -->
-  <article id="quote" class="text-shadow text-light text-center">
+  <article id="quote" class="text-shadow text-light text-center mb-5">
     <!-- <h4>Author</h4>
     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil aliquid facere nostrum, cumque doloremque quos
       dolore architecto sit! Provident accusantium officiis aspernatur dolores vero, atque reprehenderit voluptatum

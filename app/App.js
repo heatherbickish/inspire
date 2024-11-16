@@ -3,6 +3,7 @@ import { ClockController } from "./controllers/ClockController.js";
 import { ImageController } from "./controllers/ImageController.js";
 import { QuoteController } from "./controllers/QuoteController.js";
 import { TodoController } from "./controllers/ToDoController.js";
+import { WeatherController } from "./controllers/WeatherController.js";
 import { router } from './router-config.js';
 const USE_ROUTER = false
 
@@ -13,6 +14,7 @@ class App {
   ImageController = new ImageController()
   QuoteController = new QuoteController()
   ClockController = new ClockController()
+  WeatherController = new WeatherController()
 
   constructor() {
     if (USE_ROUTER) {
