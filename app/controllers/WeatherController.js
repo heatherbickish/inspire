@@ -8,6 +8,7 @@ export class WeatherController {
     console.log('🌡️🎮')
     this.fetchWeather()
     AppState.on('account', this.drawWeather)
+    this.fetchWeatherAgain()
   }
 
 
@@ -21,10 +22,28 @@ export class WeatherController {
   }
 
   drawWeather() {
-    console.log('🖋️🌡️')
+    const fahrenheit = Math.floor((AppState.weathers.main - 273.15) * 9 / 5 + 32)
+    AppState.weathers.main = fahrenheit
+    console.log(fahrenheit)
     setHTML('weather', AppState.weathers.weatherTemplate)
-    console.log(AppState.weathers)
   }
 
+  async fetchWeatherAgain() {
+    try {
+      await weatherService.fetchWeatherAgain()
+    } catch (error) {
+      console.error(error)
+      Pop.toast('Could not fetch weather again', 'error')
+    }
+  }
 
+  // convertCelsius() {
+  //   const celsius = Math.floor(AppState.weathers.main - 273.15)
+  //   AppState.weathers.main = celsius
+
+
+  //   console.log(celsius)
+
+
+  // }
 }
