@@ -23,9 +23,10 @@ export class ImageController {
   drawImage() {
     setHTML('image', AppState.images.ImageBg)
     document.body.style.backgroundImage = `url(${AppState.images.largeImgUrl})`
+    document.body.style.backgroundRepeat = 'no-repeat'
+    document.body.style.backgroundSize = 'cover'
   }
 
-  // FIXME img repeat
 
 
 }

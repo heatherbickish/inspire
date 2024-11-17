@@ -1,4 +1,11 @@
 /* BASIC STYLES HERE */
+
+
+body {
+  font-family: "Cinzel", serif;
+}
+
+
 .profile-picture {
   height: 50px;
   max-width: 100%;
@@ -8,13 +15,6 @@
 
 .profile-picture.profile-picture-sm {
   height: 44px;
-}
-
-.bg-img {
-  background-repeat: no-repeat;
-  /* background-size: contain; */
-  /* background-position: center; */
-  object-fit: cover;
 }
 
 .text-shadow {
