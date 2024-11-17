@@ -8,7 +8,7 @@ export class Weather {
 
 
 
-  get weatherTemplate() {
+  get FahrenheitTemplate() {
     return `
    <h6 class="text-shadow selectable rounded mt-2 text-center text-white">
    ${this.main} F
@@ -18,7 +18,14 @@ export class Weather {
   }
 
 
-
+  get CelsiusTemplate() {
+    return `
+  <h6 class="text-shadow selectable rounded mt-2 text-center text-white">
+  ${this.main} C
+  <p>${this.name}</p>
+  </h6>
+  `
+  }
 
 
 }

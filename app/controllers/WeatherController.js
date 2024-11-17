@@ -7,8 +7,9 @@ export class WeatherController {
   constructor() {
     console.log('🌡️🎮')
     this.fetchWeather()
-    AppState.on('account', this.drawWeather)
-    this.fetchWeatherAgain()
+    AppState.on('account', this.drawFahrenheit)
+    AppState.on('account', this.drawCelsius)
+
   }
 
 
@@ -21,29 +22,33 @@ export class WeatherController {
     }
   }
 
-  drawWeather() {
+
+  drawFahrenheit() {
     const fahrenheit = Math.floor((AppState.weathers.main - 273.15) * 9 / 5 + 32)
-    AppState.weathers.main = fahrenheit
     console.log(fahrenheit)
-    setHTML('weather', AppState.weathers.weatherTemplate)
+    setHTML('weather-fah', `${fahrenheit} F`)
+    const cancelFahrenheitElm = document.getElementById('weather-fah')
+    cancelFahrenheitElm.classList.remove('d-none')
   }
 
-  async fetchWeatherAgain() {
-    try {
-      await weatherService.fetchWeatherAgain()
-    } catch (error) {
-      console.error(error)
-      Pop.toast('Could not fetch weather again', 'error')
-    }
+  drawCelsius() {
+    const celsius = Math.floor(AppState.weathers.main - 273.15)
+    console.log(celsius)
+    setHTML('weather-cel', `${celsius} C`)
   }
 
-  // convertCelsius() {
-  //   const celsius = Math.floor(AppState.weathers.main - 273.15)
-  //   AppState.weathers.main = celsius
+  clickCelsius() {
+    const cancelFahrenheitElm = document.getElementById('weather-fah')
+    cancelFahrenheitElm.classList.add('d-none')
+  }
+  clickFahrenheit() {
+    const celsius = Math.floor(AppState.weathers.main - 273.15)
+    AppState.weathers.main = celsius
+    const cancelCelsiusElm = document.getElementById('weather-cel')
+    cancelCelsiusElm.classList.remove('d-none')
 
 
-  //   console.log(celsius)
 
 
-  // }
+  }
 }
