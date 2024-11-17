@@ -8,24 +8,18 @@ export class Weather {
 
 
 
-  get FahrenheitTemplate() {
-    return `
-   <h6 class="text-shadow selectable rounded mt-2 text-center text-white">
-   ${this.main} F
-   <p>${this.name}</p>
-   </h6>
-  `
-  }
+  // get FahrenheitTemplate() {
+  //   return `
+  //  <p>${this.name}</p>
+  // `
+  // }
 
 
-  get CelsiusTemplate() {
-    return `
-  <h6 class="text-shadow selectable rounded mt-2 text-center text-white">
-  ${this.main} C
-  <p>${this.name}</p>
-  </h6>
-  `
-  }
+  // get CelsiusTemplate() {
+  //   return `
+  // <p>${this.name}</p>
+  // `
+  // }
 
 
 }

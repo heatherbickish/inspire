@@ -60,7 +60,6 @@ export class TodoController {
       event.stopPropagation()
       const confirmed = await Pop.confirm('Are you sure you want to delete this Todo?')
       if (!confirmed) return
-      console.log('deleting todo', todoId)
       await todoService.deleteTodo(todoId)
     } catch (error) {
       console.error(error)
