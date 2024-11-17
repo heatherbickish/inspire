@@ -34,18 +34,15 @@ export class WeatherController {
     setText('weather-cel', `${celsius} C`)
   }
 
+  clickFahrenheit() {
+    const cancelCelsiusElm = document.getElementById('weather-cel')
+    cancelCelsiusElm.classList.remove('d-none')
+  }
+
   clickCelsius() {
     const cancelFahrenheitElm = document.getElementById('weather-fah')
     cancelFahrenheitElm.classList.add('d-none')
   }
-  clickFahrenheit() {
-    const celsius = Math.floor(AppState.weathers.main - 273.15)
-    AppState.weathers.main = celsius
-    const cancelCelsiusElm = document.getElementById('weather-cel')
-    cancelCelsiusElm.classList.remove('d-none')
 
 
-
-
-  }
 }
