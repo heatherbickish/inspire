@@ -5,7 +5,6 @@ import { setHTML } from "../utils/Writer.js"
 
 export class ImageController {
   constructor() {
-    console.log('🖼️🎮')
     this.fetchImage()
     AppState.on('account', this.drawImage)
   }
